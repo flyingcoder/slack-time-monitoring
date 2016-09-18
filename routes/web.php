@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('/slack', 'SlackController@index');
+
+Route::get('/slack-redirect', 'SlackController@grabInfo');
