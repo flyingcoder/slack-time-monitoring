@@ -25,4 +25,8 @@ Route::get('/slack-redirect', 'SlackController@grabInfo');
 
 Route::get('/check-auth', 'SlackController@checkAuth');
 
+Route::get('/admin', function(){
+	return view('dashboard.home');
+});
+
 
